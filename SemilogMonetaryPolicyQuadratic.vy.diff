@@ -1,0 +1,11 @@
+7c7
+<         log(rate) = utilization^2 * (log(rate_max) - log(rate_min)) + log(rate_min)
+---
+>         log(rate) = utilization * (log(rate_max) - log(rate_min)) + log(rate_min)
+142,145c142
+<         utilization: int256 = total_debt * 10**18 / total_reserves
+<         quadratic_utilization: int256 = utilization * utilization / 10**18
+<         return self.exp(quadratic_utilization * (log_max_rate - log_min_rate) / 10**18 + log_min_rate)
+< 
+---
+>         return self.exp(total_debt * (log_max_rate - log_min_rate) / total_reserves + log_min_rate)
