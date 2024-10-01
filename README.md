@@ -11,3 +11,10 @@ ape plugins install arbitrum
 pip install titanoboa
 ```
 
+# Tools to plot curve for Curve Secondary Monetary Policy
+
+https://github.com/curvefi/curve-stablecoin/blob/master/contracts/mpolicies/SecondaryMonetaryPolicy.vy
+
+1. edit params in secondary-rate-params.py
+2. run python secondary-rate-params.py
+3. look at plot in data/

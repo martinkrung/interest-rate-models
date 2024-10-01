@@ -1,0 +1,66 @@
+
+
+gray
+
+    alpha = 0.01 # 0.01 is 1% at 100% utilization and r0 = 1
+    beta = 2.5 # 0.01 is 1% at 100% utilization and r0 = 1
+    u0 = 0.9 # convexness
+    r0 = 1 # scale for beta ? 10 is = 1 
+
+    'u_inf' : 1.079136690647482,
+    'r_minf' : -0.18705035971223008,
+    'A' : 0.2126442730707519,
+
+    
+
+blue
+
+    alpha = 0.005 # 0.01 is 1% at 100% utilization and r0 = 1
+    beta = 2.5 # 0.01 is 1% at 100% utilization and r0 = 1
+    u0 = 0.9 # convexness
+    r0 = 1 # scale for beta ? 10 is = 1 
+
+    'u_inf' : 1.0795681727309077,
+    'r_minf' : -0.19352259096361454,
+    'A' : 0.21431867077239475,
+
+    
+
+lightgreen
+
+    alpha = 0.02 # 0.01 is 1% at 100% utilization and r0 = 1
+    beta = 2.5 # 0.01 is 1% at 100% utilization and r0 = 1
+    u0 = 0.95 # convexness
+    r0 = 1 # scale for beta ? 10 is = 1 
+
+    'u_inf' : 1.035610465116279,
+    'r_minf' : -0.06831395348837203,
+    'A' : 0.09145885444835039,
+
+    
+
+red
+
+    alpha = 0.02 # 0.01 is 1% at 100% utilization and r0 = 1
+    beta = 2.5 # 0.01 is 1% at 100% utilization and r0 = 1
+    u0 = 0.99 # convexness
+    r0 = 1 # scale for beta ? 10 is = 1 
+
+    'u_inf' : 1.0066431670281997,
+    'r_minf' : 0.0035249457700649647,
+    'A' : 0.016584500766983142,
+
+    
+
+black
+
+    alpha = 0.03 # 0.01 is 1% at 100% utilization and r0 = 1
+    beta = 2.5 # 0.01 is 1% at 100% utilization and r0 = 1
+    u0 = 0.8 # convexness
+    r0 = 1 # scale for beta ? 10 is = 1 
+
+    'u_inf' : 1.1928429423459244,
+    'r_minf' : -0.44632206759443316,
+    'A' : 0.568177416613638,
+
+    
