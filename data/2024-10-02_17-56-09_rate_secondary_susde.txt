@@ -1,6 +1,6 @@
 
 
-gray
+purple
 
     alpha = 0.01 # 0.01 is 1% at 100% utilization and r0 = 1
     beta = 2.5 # 0.01 is 1% at 100% utilization and r0 = 1
