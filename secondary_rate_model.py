@@ -10,7 +10,13 @@ def calculate_rate(u, p, r0):
         return float('inf')  # Return infinity for u >= u_inf
     return r0 * p['r_minf'] + (p['A'] * r0) / (p['u_inf'] - u)
 
+def plot_semilog_rate(rate_min, rate_max, *args, **kw):
+    u = np.linspace(0, 1, 200)
+    r = np.exp(u * (np.log(rate_max) - np.log(rate_min)) + np.log(rate_min))
 
+    plt.plot(u, r, *args, **kw)
+
+    
 def plot_final_rate(u_inf, r_minf, A, c):
 
     p = {
@@ -60,12 +66,14 @@ def plot_final_rate(u_inf, r_minf, A, c):
             plt.text(u, r, f'{r:.1%}, u: {u:.1%}', fontsize=8, ha='center', va='bottom')
         counter += 1
 
-    # Save the plot as a PNG file
 
     # Add text below the x-axis
     plt.text(0.5, -0.1, f'A: {p["A"]}, shift: {p["shift"]}, r_minf: {p["r_minf"]}, u_inf: {p["u_inf"]}, r0: {r0}', ha='center', va='center', transform=plt.gca().transAxes)  # Adjust the y-coordinate as needed
     
+    plot_semilog_rate(0.01, max_rate, '', c='gray')
+
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    # Save the plot as a PNG file
 
     plt.savefig(f'data/{timestamp}_{c}_interest_rate_model_A:{p["A"]}_shift:{p["shift"]}_r_minf:{p["r_minf"]}_u_inf:{p["u_inf"]}_r0:{r0}.png', dpi=300, bbox_inches='tight')
 
@@ -107,6 +115,8 @@ def plot_final_rate(u_inf, r_minf, A, c):
 
 
     plt.text(0.5, -0.1, f'A: {p["A"]}, shift: {p["shift"]}, r_minf: {p["r_minf"]}, u_inf: {p["u_inf"]}, r0: {r0}', ha='center', va='center', transform=plt.gca().transAxes)  # Adjust the y-coordinate as needed
+
+    plot_semilog_rate(0.01, max_rate, '', c='gray')
 
     # Save the plot as a PNG file
     plt.savefig(f'data/{timestamp}_{c}_interest_rate_model_zoom_A:{p["A"]}_shift:{p["shift"]}_r_minf:{p["r_minf"]}_u_inf:{p["u_inf"]}_r0:{r0}.png', dpi=300, bbox_inches='tight')

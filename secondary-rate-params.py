@@ -1,7 +1,7 @@
 import pylab
 import numpy as np
 from datetime import datetime
-from secondary_rate_model import plot_final_rate
+from secondary_rate_model import plot_final_rate, plot_semilog_rate
 
 
 # create params for this
@@ -29,11 +29,17 @@ def plot_rate(alpha, beta, u0, r0, *args, **kw):
     return printout, u_inf, r_minf, A
 
 
+
+
+
 if __name__ == '__main__':
     beta = 3
     r0 = 1
+
+    plot_semilog_rate(0.01, 2.5, '', c='gray')
+
     printout = ""
-    c = "gray"
+    c = "purple"
     printout += f"\n\n{c}\n"
     temp_printout, u_inf, r_minf, A = plot_rate(0.01, 2.5, 0.9, r0, '--', c=c)
     printout += temp_printout
@@ -71,6 +77,7 @@ if __name__ == '__main__':
         f.write(printout)
 
     print(printout)
+    pylab.title("Secondary Rate Model, grey is semilog as reference")
     pylab.grid()
     pylab.xlabel('Utilization')
     pylab.ylabel('r (%)')
