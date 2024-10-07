@@ -8,12 +8,19 @@ source .venv/bin/activate
 pip install --upgrade pip
 pip install eth-ape'[recommended-plugins]'
 ape plugins install arbitrum
-pip install titanoboa
+pip install titanoboa==0.1.10
+pip install matplotlib
 ```
 
-# Tools to plot curve for Curve Secondary Monetary Policy
+# Tools to plot curve for Curve Secondary Monetary Policy and new HyperbolicMonetary Policy
+
+https://github.com/martinkrung/curve-lending-factory
+
+and
+
 
 https://github.com/curvefi/curve-stablecoin/blob/master/contracts/mpolicies/SecondaryMonetaryPolicy.vy
+
 
 1. edit params in secondary-rate-params.py
 2. run python secondary-rate-params.py
